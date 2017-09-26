@@ -1,0 +1,79 @@
+@mixin nums($w:100%,$h:100%){
+  width: $w;
+  height: $h;
+}
+html,body.wrap{
+  @include nums();
+}
+.wrap{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  @include nums($h:1rem);
+  background: #46D265;
+  text-align: center;
+  line-height: 1rem;
+  color: #fff;
+  font-size: .4rem;
+  position: relative;
+  i.icon{
+    position: absolute;
+    top: 0;
+    left: .2rem;
+  }
+}
+.main{
+  flex: 1;
+  overflow-y: scroll;
+}
+.search{
+  @include nums($h:auto);
+  padding: .2rem 0;
+  background: #F5F5F5;
+  input{
+    width: 96%;
+    height: .8rem;
+    border:1px solid #ccc;
+    border-radius: 6px;
+    margin-left: 2%;
+    padding-left: .8rem;
+  }
+}
+h1{
+  @include nums($w:90%,$h:.5rem);
+  background: #CECECE;
+  padding-left: .1rem;
+}
+.fixed{
+  line-height: 1rem;
+  padding-left: .2rem;
+}
+.list{
+  @include nums($h:auto);
+  li{
+    @include nums($h:1rem);
+    line-height: 1rem;
+    padding-left: .2rem;
+    border-bottom: 1px solid #CBCBCB;
+    font-size: .36rem;
+  }
+}
+.asd{
+  counter-reset: asd;
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  color: #48D169;
+  li{
+    counter-increment: asd;
+    text-align: center;
+    &:before{
+      content: counter(asd,upper-latin);
+    }
+  }
+}
+.bg{
+  color: #48D169;
+}

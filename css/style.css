@@ -1,0 +1,135 @@
+html, body, .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  display: -webkit-flex;
+  -webkit-flex-direction: column; }
+
+.header {
+  width: 100%;
+  height: 1rem;
+  background: #46D265;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 20px;
+  color: #fff; }
+
+.main {
+  flex: 1;
+  overflow-y: scroll; }
+
+.container {
+  width: 100%;
+  height: auto;
+  position: relative; }
+  .container .wrapper, .container .slide img {
+    width: 100%;
+    height: auto; }
+  .container .pagination {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 5px;
+    left: 0; }
+
+.icons-img {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff; }
+  .icons-img dl {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .icons-img dl dt {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      line-height: 50px;
+      background: #46D265;
+      border-radius: 50%; }
+      .icons-img dl dt i.icon {
+        font-size: .4rem; }
+    .icons-img dl dd {
+      line-height: .8rem; }
+  .icons-img dl:nth-child(2) dt {
+    background: #FF7900; }
+  .icons-img dl:nth-child(3) dt {
+    background: #5AAAFF; }
+  .icons-img dl:nth-child(4) dt {
+    background: #FEB546; }
+  .icons-img dl:nth-child(5) dt {
+    background: #FE645A; }
+  .icons-img dl:nth-child(6) dt {
+    background: #66CBFF; }
+  .icons-img dl:nth-child(7) dt {
+    background: #FFD33C; }
+  .icons-img dl:nth-child(8) dt {
+    background: #5BDCC8; }
+
+.picBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .picBox dl {
+    width: 45%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 5px 8px;
+    background: #fff; }
+    .picBox dl dt {
+      padding-left: 5px; }
+    .picBox dl h1 {
+      font-size: .4rem;
+      color: #E67660;
+      line-height: 1rem; }
+    .picBox dl p {
+      font-size: .3rem;
+      color: #D0D0D0; }
+    .picBox dl dd {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .picBox dl dd img {
+        width: 1.5rem;
+        height: auto; }
+
+.footer {
+  width: 100%;
+  height: 1rem;
+  background: #F9F9F9;
+  border-top: 1px solid #E1E1E1;
+  color: #666; }
+  .footer ul {
+    width: 100%;
+    height: 1rem;
+    display: flex; }
+  .footer li {
+    width: 25%;
+    height: 1rem;
+    text-align: center;
+    padding: 2px 0; }
+    .footer li i.icon {
+      font-size: .4rem; }
+    .footer li p {
+      padding-top: 2px; }
+
+.bg {
+  color: #46D265; }
+
+/*# sourceMappingURL=style.css.map */

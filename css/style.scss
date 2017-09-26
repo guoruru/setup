@@ -1,0 +1,150 @@
+@mixin nums($w:100%,$h:100%){
+  width:$w;
+  height:$h;
+}
+@mixin flex($j:center){
+  display: flex;
+  justify-content: $j;
+  align-items: center;
+}
+html,body,.wrap{
+  @include nums();
+  overflow:hidden;
+}
+.wrap{
+  @include nums();
+  background: #F6F6F6;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+.header{
+  @include nums($w:100%,$h:1rem);
+  background: #46D265;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 20px;
+  color: #fff;
+}
+.main{
+  flex: 1;
+  overflow-y: scroll;
+}
+.container,{
+  @include nums($h:auto);
+  position: relative;
+  .wrapper,.slide img{
+    @include nums($h:auto);
+  }
+  .pagination{
+    @include nums($h:auto);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+  }
+}
+.icons-img{
+  @include nums($h:auto);
+  padding: 10px 0;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  dl{
+    @include nums($w:25%,$h:auto);
+    @include flex();
+    flex-direction: column;
+    dt{
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      line-height: 50px;
+      background: #46D265;
+      border-radius: 50%;
+      i.icon{
+        font-size: .4rem;
+      }
+    }
+    dd{
+      line-height: .8rem;
+    }
+  }
+  dl:nth-child(2) dt{
+    background: #FF7900;
+  }
+  dl:nth-child(3) dt{
+    background: #5AAAFF
+  }
+  dl:nth-child(4) dt{
+    background: #FEB546;
+  }
+  dl:nth-child(5) dt{
+    background: #FE645A;
+  }
+  dl:nth-child(6) dt{
+    background: #66CBFF;
+  }
+  dl:nth-child(7) dt{
+     background: #FFD33C;
+  }
+  dl:nth-child(8) dt{
+    background: #5BDCC8;
+  }
+}
+.picBox{
+  @include nums($h:auto);
+  display: flex;
+  flex-wrap: wrap;
+  dl{
+    @include nums($w:45%,$h:2rem);
+    border:1px solid #ccc;
+    position: relative;
+    margin: 5px 8px;
+    background: #fff;
+    dt{
+      padding-left: 5px;
+    }
+    h1{
+      font-size: .4rem;
+      color: #E67660;
+      line-height: 1rem;
+    }
+    p{
+      font-size: .3rem;
+      color: #D0D0D0;
+    }
+    dd{
+      position: absolute;
+      top: 0;
+      right: 0;
+      img{
+        @include nums($w:1.5rem,$h:auto);
+      }
+    }
+  }
+}
+.footer{
+  @include nums($h:1rem);
+  background: #F9F9F9;
+  border-top: 1px solid #E1E1E1;
+  color: #666;
+  ul{
+    @include nums($h:1rem);
+    display: flex;
+  }
+  li{
+    @include nums($w:25%,$h:1rem);
+    text-align: center;
+    padding: 2px 0;
+    i.icon{
+      font-size: .4rem;
+    }
+    p{
+      padding-top: 2px;
+    }
+  }
+}
+.bg{
+  color: #46D265;
+}
